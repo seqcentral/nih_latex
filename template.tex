@@ -1,0 +1,121 @@
+% http://www.magalien.com/public/nih_grants_in_latex.html
+% NIH grant proposal file (2011)
+
+\documentclass[11pt,notitlepage]{article}
+
+% Packages to load
+
+% Arial font that NIH allows
+\renewcommand{\familydefault}{\sfdefault}
+\linespread{1.05}
+
+% Better and richer math environment
+\usepackage{amsmath}
+
+% EPS and PDF figures
+\usepackage{graphicx}
+
+% Make 0.5'' margins on all sides
+\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+
+% Add itemize*, description*, and enumerate* environments to shrink white space between list items
+\usepackage{mdwlist}
+
+% No page numbers
+\pagestyle{empty}
+
+% Compress white space around titles
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titlespacing{\paragraph}{0pt}{*0}{*2}
+
+% Separate new paragraphs by 0.2 cm of white space (rather than indents)
+\usepackage{parskip}
+\setlength{\parskip}{0.2cm}
+
+\setlength{\belowcaptionskip}{-1ex} % remove extra space above and below in-line float (e.g., captions)
+\setlength{\abovecaptionskip}{1.5ex} % remove extra space above and below in-line float (e.g. captions)
+
+% Add non-sensical text (i.e. lorem ipsum)
+\usepackage{blindtext}
+\usepackage[english]{babel}
+
+% Begin document
+
+\begin{document}
+
+\section*{Section Heading (e.g., Research Strategy)}
+
+\subsection*{Subsection Heading (e.g., Significance)}
+
+\blindtext
+
+\subsubsection*{Subsubsection Heading (e.g., Specific Aim \#1)}
+
+\blindtext
+
+\paragraph{Paragraph Heading}
+\blindtext
+
+A list with less whitespace between items
+
+\begin{itemize*}
+	\item Item 1
+	\item Item 2
+	\item Item 3
+\end{itemize*}
+
+\begin{quote}
+	``A block quote with citation.'' -- Author~\cite{reference1}
+\end{quote}
+
+\begin{figure}[htbp]
+\begin{center}
+
+\begin{tabular}{|c|c|}
+
+\hline
+Column 1 & Column 2 \\
+\hline 
+1 & 2 \\
+\hline
+
+\end{tabular}
+
+\caption{Two column table with less white space above/below caption}
+\label{default}
+\end{center}
+\end{figure}
+
+
+\newpage
+
+\section*{Specific Aims}
+
+\blindtext
+ ...
+
+ \newpage
+
+\section*{Research Strategy}
+
+\subsection*{Significance}
+
+\blindtext ...~\cite{reference1}
+
+\subsection*{Innovation}
+
+\blindtext ...
+
+\subsection*{Approach}
+
+\blindtext ...
+
+\newpage
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document} 
